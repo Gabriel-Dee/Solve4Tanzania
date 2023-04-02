@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Research Application Form</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+          integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <style>
+        html, body {
+            min-height: 100%;
+        }
+
+        body, div, form, input, select, textarea, p {
+            padding: 0;
+            margin: 0;
+            outline: none;
+            font-family: Roboto, Arial, sans-serif;
+            font-size: 14px;
+            color: #666;
+            line-height: 22px;
+        }
+
+        h1 {
+            position: absolute;
+            margin: 0;
+            font-size: 32px;
+            color: #fff;
+            z-index: 2;
+        }
+
+        h5 {
+            margin: 10px 0;
+        }
+
+        .testbox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: inherit;
+            padding: 20px;
+        }
+
+        form {
+            width: 100%;
+            padding: 20px;
+            border-radius: 6px;
+            background: #fff;
+            box-shadow: 0 0 20px 0 #095484;
+        }
+
+        .banner {
+            position: relative;
+            height: 210px;
+            background-color: #26bc89;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .banner::after {
+            content: "";
+            background-color: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        input, select, textarea {
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input {
+            width: calc(100% - 10px);
+            padding: 5px;
+        }
+
+        select {
+            width: 100%;
+            padding: 7px 0;
+            background: transparent;
+        }
+
+        textarea {
+            width: calc(100% - 12px);
+            padding: 5px;
+        }
+
+        .item:hover p, .item:hover i, .question:hover p, .question label:hover, input:hover::placeholder, a {
+            color: #095484;
+        }
+
+        .item input:hover, .item select:hover, .item textarea:hover {
+            border: 1px solid transparent;
+            box-shadow: 0 0 6px 0 #095484;
+            color: #095484;
+        }
+
+        .item {
+            position: relative;
+            margin: 10px 0;
+        }
+
+        input[type="date"]::-webkit-inner-spin-button {
+            display: none;
+        }
+
+        .item i, input[type="date"]::-webkit-calendar-picker-indicator {
+            position: absolute;
+            font-size: 20px;
+            color: #a9a9a9;
+        }
+
+        .item i {
+            right: 2%;
+            top: 30px;
+            z-index: 1;
+        }
+
+        [type="date"]::-webkit-calendar-picker-indicator {
+            right: 1%;
+            z-index: 2;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        input[type=radio], input[type=checkbox] {
+            display: none;
+        }
+
+        label.radio, label.check {
+            position: relative;
+            display: inline-block;
+            margin: 5px 20px 15px 0;
+            cursor: pointer;
+        }
+
+        .question span {
+            margin-left: 30px;
+        }
+
+        span.required {
+            margin-left: 0;
+            color: red;
+        }
+
+        .checkbox-item label {
+            margin: 5px 20px 10px 0;
+        }
+
+        label.radio:before, label.check:before {
+            content: "";
+            position: absolute;
+            left: 0;
+        }
+
+        label.radio:before {
+            width: 17px;
+            height: 17px;
+            border-radius: 50%;
+            border: 2px solid #095484;
+        }
+
+        label.check:before {
+            top: 2px;
+            width: 16px;
+            height: 16px;
+            border-radius: 2px;
+            border: 1px solid #095484;
+        }
+
+        input[type=checkbox]:checked + .check:before {
+            background: #095484;
+        }
+
+        label.radio:after {
+            left: 5px;
+            border: 3px solid #095484;
+        }
+
+        label.check:after {
+            left: 4px;
+            border: 3px solid #fff;
+        }
+
+        label.radio:after, label.check:after {
+            content: "";
+            position: absolute;
+            top: 6px;
+            width: 8px;
+            height: 4px;
+            background: transparent;
+            border-top: none;
+            border-right: none;
+            transform: rotate(-45deg);
+            opacity: 0;
+        }
+
+        input[type=radio]:checked + label:after, input[type=checkbox]:checked + label:after {
+            opacity: 1;
+        }
+
+        .btn-block {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        button {
+            width: 150px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #095484;
+            font-size: 16px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0666a3;
+        }
+
+        @media (min-width: 568px) {
+            .city-item {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            .city-item input {
+                width: calc(50% - 20px);
+            }
+
+            .city-item select {
+                width: calc(50% - 8px);
+            }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="container-xxl bg-white p-0">
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5">
+            <h1 class="m-0 text-primary">Solve4Tanzania</h1>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="about.html" class="nav-item nav-link">About</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Jobs</a>
+                    <div class="dropdown-menu rounded-0 m-0">
+                        <a href="job-list.html" class="dropdown-item">Job List</a>
+                        <a href="job-detail.html" class="dropdown-item">Job Detail</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                    <div class="dropdown-menu rounded-0 m-0">
+                        <a href="category.html" class="dropdown-item">Job Category</a>
+                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        <a href="404.html" class="dropdown-item">404</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+            <a href="request.html" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Request a Worker<i
+                    class="fa fa-arrow-right ms-3"></i></a>
+        </div>
+    </nav>
+    <div class="testbox">
+        <form action="/">
+            <div class="banner">
+                <h1>Worker request form</h1>
+            </div>
+            <div class="item">
+                <p>Full Name</p>
+                <input type="text" name="name"/>
+            </div>
+            <div class="item">
+                <p>NIDA:</p>
+                <input type="text" name="name"/>
+            </div>
+            <div class="item">
+                <p>Type of Work</p>
+                <input type="text" name="name"/>
+            </div>
+            <div class="item">
+                <p>Duration</p>
+                <input type="text" placeholder="Eg. 6 hr, 1 day, A weeek">
+            </div>
+            <div class="item">
+                <p>Date</p>
+                <input type="date" name="bdate" required/>
+                <i class="fas fa-calendar-alt"></i>
+            </div>
+            <div class="item">
+                <p>Name and Credentials<span class="required">*</span></p>
+                <input type="text" name="name" required/>
+            </div>
+            <div class="item">
+                <p>Phone<span class="required">*</span></p>
+                <input type="text" name="name" required/>
+            </div>
+            <div class="question">
+                <p>Research Application Checklist:<span class="required">*</span></p>
+                <small>Please include the following in your application.</small>
+                <div class="question-answer checkbox-item">
+                    <div>
+                        <input type="checkbox" value="none" id="check_1" name="checklist" required/>
+                        <label for="check_1" class="check"><span>Proposal Cover Form</span></label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="none" id="check_2" name="checklist" required/>
+                        <label for="check_2" class="check"><span>Abstract</span></label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="none" id="check_3" name="checklist" required/>
+                        <label for="check_3" class="check"><span>Narrative</span></label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="none" id="check_4" name="checklist" required/>
+                        <label for="check_4" class="check"><span>Budget and Budget Justification</span></label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="none" id="check_5" name="checklist" required/>
+                        <label for="check_5" class="check"><span>Timeframe</span></label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="none" id="check_6" name="checklist" required/>
+                        <label for="check_6" class="check"><span>References</span></label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="none" id="check_7" name="checklist" required/>
+                        <label for="check_7" class="check"><span>Appendices</span></label>
+                    </div>
+                    <div>
+                        <input type="checkbox" value="none" id="check_8" name="checklist" required/>
+                        <label for="check_8" class="check"><span>Bio Sketch</span></label>
+                    </div>
+                </div>
+            </div>
+            <br/>
+            <div class="btn-block">
+                <button type="submit" href="/">Send Application</button>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
