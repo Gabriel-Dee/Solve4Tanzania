@@ -1,5 +1,5 @@
 # Solve4Tanzania.
-A Gig Economy Platform for Informal Jobs inquiry in Tanzania
+A Gig Economy Platform for Informal Jobs inquiry in Tanzania.
 
 This project is a web application built using plain HTML, CSS, and JavaScript. The project's aim is to explore the gig economy and its impact on informal jobs in Tanzania. The web application allows users to browse through different informal jobs available in Tanzania and their descriptions.
 
